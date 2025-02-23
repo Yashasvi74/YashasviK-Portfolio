@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <title>Yash Portfolio</title>
+
+    <style>
+        body {
+            background-color:#1f242d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .certifications-section {
+            max-width: 1000px;
+
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+            /*justify-content: center;*/
+        }
+        .cert-card {
+            background: white;
+            border-radius: 10px;
+            width: 250px;
+            height: 400px;
+            padding: 20px;
+            /*margin: 20px 0;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            /*gap: 20px;*/
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+        .cert-card img {
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+        
+           /* width: 50px;
+            height: 50px;*/
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+        }
+        .cert-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+        h1 {
+            margin-top: 5%;
+            color: #0ef;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        h2,p{
+            color: black;
+        }
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+.modal iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    display: block; /* Ensures image is visible */
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+footer {
+    background: linear-gradient(90deg, #1f242d, #292e39); /* Subtle gradient */
+    box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.6); /* Neon Glow on Top */
+}
+footer p{
+    color: white;
+}
+footer div a {
+    text-decoration: none;  /* Remove any unwanted underline */
+    font-size: 28px;        /* Make the icons slightly larger */
+    display: inline-flex;   /* Align properly */
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+</style>
+    
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">YK.</a>
+       
+        <nav class="navbar">
+        <a href="index.html" style="--i:1;">Home</a>
+        <a href="about.html"style="--i:2;">About</a>
+        <a href="skills.html"style="--i:3;">Skills</a>
+        <!--<a href="portfolio.html"style="--i:4;">Portfolio</a>-->
+        <a href="certificates.html"style="--i:5;" class="active">Certifications</a>
+        <a href="contact.html"style="--i:6;">Contact</a>
+
+       </nav> 
+    </header>
+
+
+<section>
+    <h1>My Certifications</h1>
+    <div class="certifications-section">
+        <div class="cert-card" data-pdf="MLalgGL.pdf">
+            <div class="cert-preview">
+                <img src="MLalgGL_page-0001.jpg" alt="Machine Learning Certificate">
+            </div>
+            <div class="cert-text">
+                <h2>Machine Learning Algorithms</h2>
+                <p>Great Learning</p>
+            </div>
+        </div>
+        
+        <div class="cert-card" data-pdf="Coursera_ResearchMethods.pdf">
+            <div class="cert-preview">
+                <img src="Research.png" alt="Research Methods Certificate">
+            </div>
+            <div class="cert-text">
+                <h2>Understanding Research Methods</h2>
+                <p>University of London</p>
+            </div>
+        </div>
+        
+        <div class="cert-card" data-pdf="Essentialsofcc.pdf">
+            <div class="cert-preview">
+                <img src="Essentialsofcc_page-0001.jpg" alt="Cloud Computing Certificate">
+            </div>
+            <div class="cert-text">
+                <h2>Essentials of Cloud Computing</h2>
+                <p>Infosys Springboard</p>
+            </div>
+        </div>
+        
+</section>
+<div id="pdf-modal" class="modal">
+    <span id="modal-close" class="modal-close">&times;</span>
+    <iframe id="modal-iframe" width="80%" height="80%"></iframe>
+</div>
+
+<script src="certificate.js"></script>
+<footer style="text-align: center; padding: 20px; background-color: #1f242d; color:white; position: relative;">
+    <p >© <span id="year"></span> YashasviK. All Rights Reserved.</p>
+    
+    <!-- Social Media Icons (Using Boxicons instead of FontAwesome) -->
+    <div style="margin-top: 10px;">
+        <!--<a href="https://github.com/yourusername" target="_blank" style="color: white; margin: 0 10px; font-size: 24px;">
+            <i class='bx bxl-github'></i>
+        </a>-->
+        <a href="http://www.linkedin.com/in/yashasvi-k" target="_blank" style="color: white; margin: 0 15px; font-size: 28px;">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="mailto:yashasvi07k@gmail.com" style="color: white; margin: 0 15px; font-size: 28px;">
+            <i class='bx bx-envelope'></i>
+        </a>
+    </div>
+</footer>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" 
+style="display: none; position: fixed; bottom: 20px; right: 20px; 
+background-color: #00bcd4; color: white; border: none; padding: 10px 15px; 
+cursor: pointer; border-radius: 5px; font-size: 18px; z-index: 999;">
+↑ Top
+</button>
+
+<script>
+    // Set the current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.addEventListener("DOMContentLoaded", function () {
+    let btn = document.getElementById("backToTopBtn");
+
+    // Show/hide button when scrolling
+    window.addEventListener("scroll", function () {
+        console.log("Scroll position:", window.scrollY); // Debugging log
+        if (window.scrollY > 100) {  
+            btn.style.display = "block";  
+        } else {
+            btn.style.display = "none";  
+        }
+    });
+
+    // Smooth scroll to top
+    btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+</script>
+
+</body>
+</html>
+

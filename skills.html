@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1f242d;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        padding:20px 10%;
+        background:transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    } 
+        .navbar a {
+            display: inline-block;
+            font-size: 18px;
+            color:#fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+            opacity: 0;
+            animation: slideTop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+        }
+        .navbar a:hover {
+            color: #0ef;
+        }
+        .skills-section {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 5%;
+    font-size: 2rem;
+    color:#0ef;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    display: flex;
+    align-items: center;
+    background-color:white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    flex-direction: column;
+
+}
+h2{
+    color:rgb(7, 7, 7);
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    margin-right: 15px;
+    color:rgb(197, 17, 17);
+}
+
+.skill-card h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.skill-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #070707;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skill-card i {
+        margin-bottom: 10px;
+    }
+}
+footer {
+    background: linear-gradient(90deg, #1f242d, #292e39); /* Subtle gradient */
+    box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.6); /* Neon Glow on Top */
+}
+footer div a {
+    text-decoration: none;  /* Remove any unwanted underline */
+    font-size: 28px;        /* Make the icons slightly larger */
+    display: inline-flex;   /* Align properly */
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">YK.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Skills</a>
+           <!-- <a href="portfolio.html">Portfolio</a>-->
+            <a href="certificates.html">Certifications</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="skills-section">
+        <h1>My Skills</h1>
+        <div class="skill-card">
+            <i class='bx bxl-java'></i>
+
+            <div>
+                <h2>Java</h2>
+                <p>Intermediate proficiency in Java programming.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class='bx bxl-python' ></i>
+            <div>
+                <h2>Python</h2>
+                <p>Intermediate proficiency in Python programming.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class='bx bx-data'></i>
+            <div>
+                <h2>MySQL</h2>
+                <p>Experience in database management and SQL queries.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class='bx bxl-html5' ></i>
+            <div>
+                <h2>HTML</h2>
+                <p>Experience in structuring web pages using HTML.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class='bx bxl-css3' ></i>
+            <div>
+                <h2>CSS</h2>
+                <p>Experience in styling web pages with CSS.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-paint-brush"></i>
+            <div>
+                <h2>Canva</h2>
+                <p>Experience in designing using Canva.</p>
+            </div>
+        </div>
+        <div class="skill-card">
+            <i class='bx bx-slideshow'></i>
+            <div>
+                <h2>Microsoft PowerPoint</h2>
+                <p>Experience in creating presentations using PowerPoint.</p>
+            </div>
+        </div>
+    </section>
+    <footer style="text-align: center; padding: 20px; background-color: #1f242d; color: white; position: relative;">
+        <p>© <span id="year"></span> YashasviK. All Rights Reserved.</p>
+        
+        <!-- Social Media Icons (Using Boxicons instead of FontAwesome) -->
+        <div style="margin-top: 10px;">
+            <!--<a href="https://github.com/yourusername" target="_blank" style="color: white; margin: 0 10px; font-size: 24px;">
+                <i class='bx bxl-github'></i>
+            </a>-->
+            <a href="http://www.linkedin.com/in/yashasvi-k" target="_blank" style="color: white; margin: 0 15px; font-size: 28px;">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="mailto:yashasvi07k@gmail.com" style="color: white; margin: 0 15px; font-size: 28px;">
+                <i class='bx bx-envelope'></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" 
+    style="display: none; position: fixed; bottom: 20px; right: 20px; 
+    background-color: #00bcd4; color: white; border: none; padding: 10px 15px; 
+    cursor: pointer; border-radius: 5px; font-size: 18px; z-index: 999;">
+    ↑ Top
+    </button>
+    
+    <script>
+        // Set the current year dynamically
+        document.getElementById("year").textContent = new Date().getFullYear();
+    
+        document.addEventListener("DOMContentLoaded", function () {
+        let btn = document.getElementById("backToTopBtn");
+    
+        // Show/hide button when scrolling
+        window.addEventListener("scroll", function () {
+            console.log("Scroll position:", window.scrollY); // Debugging log
+            if (window.scrollY > 100) {  
+                btn.style.display = "block";  
+            } else {
+                btn.style.display = "none";  
+            }
+        });
+    
+        // Smooth scroll to top
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+    
+    </script>
+</body>
+</html>
+

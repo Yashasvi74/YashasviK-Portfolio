@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <title>About Me</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".btn").addEventListener("click", function (event) {
+                event.preventDefault();
+                document.getElementById("education").scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+    <style>
+ 
+
+.about, .education {
+    background: inherit; /* Uses the body's background */
+}
+
+        .education {
+            padding: 50px 20px;
+            background: #1f242d;
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #007bff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .edu-box {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .edu-box:nth-child(odd) {
+            left: 0;
+        }
+        .edu-box:nth-child(even) {
+            left: 50%;
+        }
+        .edu-box::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #007bff;
+            border-radius: 50%;
+            top: 15px;
+            left: 100%;
+            transform: translateX(-50%);
+        }
+        .edu-box:nth-child(even)::before {
+            left: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+    background: linear-gradient(90deg, #1f242d, #292e39); /* Subtle gradient */
+    box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.6); /* Neon Glow on Top */
+}
+footer div a {
+    text-decoration: none;  /* Remove any unwanted underline */
+    font-size: 28px;        /* Make the icons slightly larger */
+    display: inline-flex;   /* Align properly */
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">YK.</a>
+       
+        <nav class="navbar">
+        <a href="index.html" style="--i:1;">Home</a>
+        <a href="about.html" style="--i:2;" class="active">About</a>
+        <a href="skills.html" style="--i:3;">Skills</a>
+        <!--<a href="portfolio.html" style="--i:4;">Portfolio</a>-->
+        <a href="certificates.html" style="--i:5;">Certifications</a>
+        <a href="contact.html" style="--i:6;">Contact</a>
+       </nav> 
+    </header>
+    
+    <section class="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>Hello! I am an motivated and tech enthusiast pursuing an <strong>MSc in Software Technology</strong>. 
+            I have a strong foundation in <strong>java, SQL</strong>, and intermediate knowledge of Python.<strong>I have worked with HTML and CSS concepts.</strong>. 
+            My areas of interest include <strong>machine learning, web development, and software development</strong>.</p>
+            <a href="#education" class="btn">Education Background</a>
+        </div>
+        <div class="about-img">
+            <img src="yash-about.png" alt="">
+        </div>
+    </section>
+    
+    <section id="education" class="education">
+        <h2>Education Background</h2>
+        <div class="timeline">
+            <div class="edu-box">
+                <h3>MSc in Software Technology</h3>
+                <p>St. Aloysius College - AIMIT, Mangalore (Expected Aug 2025 | CGPA: 8.12)</p>
+            </div>
+            <div class="edu-box">
+                <h3>BSc in Computer Science</h3>
+                <p>University College Mangalore (Completed Aug 2023 | CGPA: 8.17)</p>
+            </div>
+            <div class="edu-box">
+                <h3>PUC in Computer Science</h3>
+                <p>Capitanio Composite PU College, Mangalore (Completed July 2020 | Percentage: 78.75%)</p>
+            </div>
+            <div class="edu-box">
+                <h3>SSLC</h3>
+                <p>Capitanio English Medium High School, Mangalore (Completed May 2018 | Percentage: 91.20%)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background-color: #1f242d; color: white; position: relative;">
+        <p>© <span id="year"></span> YashasviK. All Rights Reserved.</p>
+        
+        <!-- Social Media Icons (Using Boxicons instead of FontAwesome) -->
+        <div style="margin-top: 10px;">
+            <!--<a href="https://github.com/yourusername" target="_blank" style="color: white; margin: 0 10px; font-size: 24px;">
+                <i class='bx bxl-github'></i>
+            </a>-->
+            <a href="http://www.linkedin.com/in/yashasvi-k" target="_blank" style="color: white; margin: 0 15px; font-size: 28px;">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="mailto:yashasvi07k@gmail.com" style="color: white; margin: 0 15px; font-size: 28px;">
+                <i class='bx bx-envelope'></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTopBtn" 
+    style="display: none; position: fixed; bottom: 20px; right: 20px; 
+    background-color: #00bcd4; color: white; border: none; padding: 10px 15px; 
+    cursor: pointer; border-radius: 5px; font-size: 18px; z-index: 999;">
+    ↑ Top
+    </button>
+    
+    <script>
+        // Set the current year dynamically
+        document.getElementById("year").textContent = new Date().getFullYear();
+    
+        document.addEventListener("DOMContentLoaded", function () {
+        let btn = document.getElementById("backToTopBtn");
+    
+        // Show/hide button when scrolling
+        window.addEventListener("scroll", function () {
+            console.log("Scroll position:", window.scrollY); // Debugging log
+            if (window.scrollY > 100) {  
+                btn.style.display = "block";  
+            } else {
+                btn.style.display = "none";  
+            }
+        });
+    
+        // Smooth scroll to top
+        btn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    });
+    
+    </script>
+</body>
+</html>

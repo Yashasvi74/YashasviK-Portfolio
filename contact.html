@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Yash Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: #1f242d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Contact Section */
+.contact {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 40px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.contact-left, .contact-right {
+    flex: 1; /* Both take equal width */
+    max-width: 450px; /* Prevents it from stretching too much */
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Makes it wider */
+    max-width: 1000px; /* Prevents it from getting too large */
+    margin: auto;
+    max-height: 500px;
+    padding: 40px;
+    background: #222831;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    flex-wrap: wrap; /* Makes it responsive */
+    gap: 30px;
+}
+
+/* Left Section */
+.contact-left {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.contact-left img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    margin: auto;
+}
+
+.contact-info p {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.contact-info i {
+    color: cyan;
+    margin-right: 8px;
+}
+/* Right Section */
+.contact-right {
+    flex: 1;
+    padding: 20px;
+}
+.contact-right  h1 {
+            
+            color: #0ef;
+            margin-bottom: 20px;
+        }
+.contact-right form {
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+.contact-right form input,
+        .contact-right form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .contact-right form button {
+            padding: 10px;
+            background: #0ef;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact-right form button:hover {
+            background: #00cfcf;
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #0ef;
+            font-size: 25px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: white;
+        }
+        .contact-container .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+footer {
+    background: linear-gradient(90deg, #1f242d, #292e39); /* Subtle gradient */
+    box-shadow: 0px -4px 10px rgba(0, 255, 255, 0.6); /* Neon Glow on Top */
+}
+footer div a {
+    text-decoration: none;  /* Remove any unwanted underline */
+    font-size: 28px;        /* Make the icons slightly larger */
+    display: inline-flex;   /* Align properly */
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+   </style>
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">YK.</a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="certificates.html">Certifications</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+    <div class="contact-container">
+         <!-- Left Section: Illustration & Contact Info -->
+         <div class="contact-left">
+            <img src="Contact-Illustration.png" alt="Contact Illustration">
+            <p>Feel free to reach out for collaborations, freelance work, or just to say hi! 🚀</p>
+            <div class="contact-info">
+                <p><i class='bx bx-map'></i> Mangalore, India</p>
+                <p><i class='bx bx-envelope'></i> <a href="mailto:yashasvi07k@gmail.com">yashasvik07@gmail.com</a></p>
+                <!--<p><i class='bx bx-phone'></i> </p>-->
+            </div>
+        </div>
+        <!-- Right Section: Contact Form -->
+        <div class="contact-right">
+        <h1>Contact Me</h1>
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/yashasvik07@gmail.com" method="POST">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="social-links">
+            <a href="http://www.linkedin.com/in/yashasvi-k" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="mailto:yashasvi07k@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+         // Simulate form submission (for now)
+    setTimeout(() => {
+        alert("Message sent successfully! 🚀");
+        document.getElementById("contact-form").reset(); // Clear the form
+    }, 1000);
+});</script>-->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("Tip7dLeG3hdGHS-ny"); // Replace with your EmailJS Public Key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        emailjs.send("service_sfdjnpv", "template_s99csar", {
+            from_name: document.getElementById("name").value,
+            reply_to: document.getElementById("email").value, // User's email
+            message: document.getElementById("message").value,
+        }).then(response => {
+            alert("Message sent successfully! 🚀")
+            document.getElementById("contact-form").reset(); // Reset form after sending
+        }).catch(error => {
+            alert("Failed to send message. Try again.");
+            console.error("EmailJS Error:", error);
+        });
+    });
+</script>
+<footer style="text-align: center; padding: 20px; background-color: #1f242d; color: white; position: relative;">
+    <p>© <span id="year"></span> YashasviK. All Rights Reserved.</p>
+    
+    <!-- Social Media Icons (Using Boxicons instead of FontAwesome) -->
+    <div style="margin-top: 10px;">
+        <!--<a href="https://github.com/yourusername" target="_blank" style="color: white; margin: 0 10px; font-size: 24px;">
+            <i class='bx bxl-github'></i>
+        </a>-->
+        <a href="http://www.linkedin.com/in/yashasvi-k" target="_blank" style="color: white; margin: 0 15px; font-size: 28px;">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="mailto:yashasvi07k@gmail.com" style="color: white; margin: 0 15px; font-size: 28px;">
+            <i class='bx bx-envelope'></i>
+        </a>
+    </div>
+</footer>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" 
+style="display: none; position: fixed; bottom: 20px; right: 20px; 
+background-color: #00bcd4; color: white; border: none; padding: 10px 15px; 
+cursor: pointer; border-radius: 5px; font-size: 18px; z-index: 999;">
+↑ Top
+</button>
+
+<script>
+    // Set the current year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.addEventListener("DOMContentLoaded", function () {
+    let btn = document.getElementById("backToTopBtn");
+
+    // Show/hide button when scrolling
+    window.addEventListener("scroll", function () {
+        console.log("Scroll position:", window.scrollY); // Debugging log
+        if (window.scrollY > 100) {  
+            btn.style.display = "block";  
+        } else {
+            btn.style.display = "none";  
+        }
+    });
+
+    // Smooth scroll to top
+    btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+</script>
+
+</body>
+</html>
