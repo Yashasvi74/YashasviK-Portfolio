@@ -34,3 +34,17 @@ Welcome to my personal portfolio website! 🎉 This project showcases my skills,
 1. Clone the repository:
    ```sh
    git clone https://github.com/Yashasvi74/YashasviK-Portfolio.git
+2.Open index.html in a browser.
+
+🌐 Live Demo
+🔗 Visit My Portfolio 
+https://yashasvi74.github.io/YashasviK-Portfolio                                      
+
+💡 Future Improvements
+Adding projects section 🛠️
+Integrating EmailJS for contact form 📧
+Enhancing animations ✨
+📬 Contact Me
+📌 LinkedIn: www.linkedin.com/in/yashasvi-k      
+📧 Email: yashasvi07k@gmail.com
+
